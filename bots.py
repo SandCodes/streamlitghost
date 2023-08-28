@@ -3,12 +3,13 @@ import openai
 
 # Get the current query parameters as a dict
 params = st.experimental_get_query_params()
+st.write(params)
 if 'params' not in st.session_state:
     st.session_state.params = params
-
+st.write(params)
 # Get the value of the "example" parameter, or use a default value if not set
 chatbot_id = st.session_state.params.get("chatbot", ["0"])[0]
-
+st.write(chatbot_id)
 #Get the chatbot ids and msgs from the secrets file
 prompt_engineer_id = st.secrets["prompt_engineer_id"]
 prompt_engineer_msg = st.secrets["prompt_engineer_msg"]

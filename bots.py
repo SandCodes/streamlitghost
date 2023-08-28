@@ -28,7 +28,7 @@ else:
     name = "None"
 
 if name == "None": 
-    break
+    st.write("No Parameters were passed")
 else: 
     st.title(f"{name}")
     if "messages" not in st.session_state or len(st.session_state.messages) == 0:
